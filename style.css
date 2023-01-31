@@ -1,0 +1,143 @@
+:root {
+    --clr-neutral-100: hsl(0, 0%, 95%);
+    --clr-neutral-200: hsla(0, 0%, 100%, 0.75);
+    --clr-primary-400: hsl(31, 77%, 52%);
+    --clr-primary-600: hsl(184, 100%, 22%);
+    --clr-primary-800: hsl(179, 100%, 13%);
+
+    --ff-paragraph: 'Lexend Deca', sans-serif;
+    --ff-header: 'Big Shoulders Display', cursive;
+
+    --fw-regular: 400;
+    --fw-bold: 700;
+
+}
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  * {
+    margin: 0;
+  }
+
+  html, body {
+    height: 100%;
+  }
+
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  input, button, textarea, select {
+    font: inherit;
+  }
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  #root, #__next {
+    isolation: isolate;
+  }
+
+  /*General Styling*/
+
+body {
+padding: 3rem;
+}
+
+.even-columns {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    max-width: 90rem;
+    display: grid;
+    /*gap: 1rem;*/
+}
+
+/*@media (min-width:38em) {
+    .even-columns {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}*/
+
+@media (min-width:45em) {
+    .even-columns {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.each-column {
+    padding: 3rem;
+
+}
+
+.fontaccent {
+    font-weight: var(--fw-bold);
+    font-family: var(--ff-header);
+    color: var(--clr-neutral-100);
+}
+
+.fontregular {
+    font-weight: var(--fw-regular);
+    font-family: var(--ff-paragraph);
+    color: var(--clr-neutral-200);
+    font-size: 0.9375rem;
+}
+
+.header {
+    text-transform: uppercase;
+}
+
+.orange {
+    background-color: var(--clr-primary-400);
+}
+
+.dark-cyan {
+    background-color: var(--clr-primary-600);
+}
+
+.very-dark-cyan {
+    background-color: var(--clr-primary-800);
+}
+
+.button {
+    background: var(--clr-neutral-100);
+    border-radius: 1.5rem;
+    border: none;
+    padding: 0.5rem 1rem;
+    width: 9rem;
+    height: 3rem;
+    font-family: var(--ff-paragraph);
+    /*margin-top: 2.5rem;*/
+}
+
+#style-1 {
+    color: var(--clr-primary-400);
+}
+
+#style-2 {
+    color: var(--clr-primary-600);
+}
+
+#style-3 {
+    color: var(--clr-primary-800);
+}
+
+p {
+    margin-bottom: 4rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+button:hover {
+    border: 0.1rem solid var(--clr-neutral-100);
+    background: inherit;   
+}
